@@ -5,9 +5,6 @@
   "main": "index.js",
   "scripts": {
     "start": "node index",
-    "server": "nodemon index",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install && npm run build"
   },
   "author": "",
   "license": "ISC",
