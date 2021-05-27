@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Montserrat:wght@300;400&family=Mountains+of+Christmas&family=Oswald:wght@300&family=Pacifico&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+    
+    <script
+    src="https://kit.fontawesome.com/03bf074d16.js"
+    crossorigin="anonymous"
+  ></script>
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,100;1,300&display=swap"
+    rel="stylesheet"
+  />
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/03bf074d16.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script> <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,100;1,300&display=swap"
+      rel="stylesheet"
+    />
+    <title>GStore</title>
+    <style>
+         .bg-dark-light {
+    background: #323232 !important;
+}
+.bg-theme, .bg-dark, .bg-dark-light, .bg-secondary {
+    color: #ffffff;
+}
+.widgets.footer-widgets .widget-title {
+    color: #ffffff;
+    font-family: "Raleway", sans-serif;
+    font-weight: 700;
+    margin-bottom: 30px;
+    letter-spacing: 0.5px;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.widgets.footer-widgets .widget-title::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 100px;
+    background: #13bfb1;
+}
+.widgets.footer-widgets .widget-quick-links ul {
+    margin-top: -4px;
+}
+.widgets.footer-widgets .single-widget ul {
+    padding-left: 0;
+    margin-bottom: 0;
+}
+
+.widgets.footer-widgets .widget-quick-links ul li {
+    display: block;
+}
+.widgets.footer-widgets .widget-quick-links ul li a {
+    display: block;
+    font-size: 13px;
+    color: #ffffff;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 9px 0;
+}
+
+.widgets.footer-widgets .single-widget ul li {
+    list-style: none;
+    font-family: "Raleway", sans-serif;
+}
+.widgets.footer-widgets .widget-contact ul li {
+    color: #000;
+    font-size: 13px;
+    color: #ffffff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+.widgets.footer-widgets .widget-contact ul li span {
+    font-size: 14px;
+    color: #ffffff;
+    border: 2px solid #cccccc;
+    border-radius: 3px;
+    height: 32px;
+    width: 32px;
+    display: inline-block;
+    line-height: 28px;
+    text-align: center;
+    margin-right: 20px;
+}
+.widgets.footer-widgets .widget-contact ul li.phone, .widgets.footer-widgets .widget-contact ul li.fax {
+    font-size: 15px;
+}
+
+.widgets.footer-widgets .widget-contact ul li + li {
+    margin-top: 20px;
+}
+      .btn-next {
+        background-color: white;
+        color: black;
+      }
+      .btn-next:hover {
+        color: white;
+        background-color: #ffdf6b;
+      }
+      * {
+        font-family: "Poppins", sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+      footer {
+        background-color: black;
+        color: white;
+        height: 250px;
+        position: relative;
+        top: 40px;
+        width: 100%;
+        margin: 0;
+      }
+      .coloumn {
+        float: left;
+        height: 100px;
+        padding: 10px;
+        padding-top: 40px;
+      }
+      .first {
+        text-align: left;
+        padding-left: 20px;
+        padding-right: 10px;
+        width: 26%;
+      }
+      .sec {
+        padding: 10px;
+        padding-top: 40px;
+        width: 29%;
+        text-align: center;
+      }
+      .third {
+        width: 18%;
+      }
+      .forth {
+        width: 18%;
+      }
+      ul {
+        list-style: none;
+        padding-top: 30px;
+      }
+      li {
+        color: black;
+        font-size: 17px;
+        margin: 2px 8px;
+        float: right;
+        padding-bottom: 25px;
+      }
+      a {
+        text-decoration: none;
+        color: black;
+      }
+      .up:hover {
+        top: -16px;
+      }
+      
+
+nav {
+  font-family: 'Montserrat', sans-serif;
+  width: 80%;
+  margin: 0 auto;
+  background: #fff;
+  padding: 1px 0;
+  box-shadow: 0px 0px 0px #dedede;
+  margin-top: 0;
+}
+
+/* By Dominik Biedebach @domobch */
+nav ul {
+  list-style: none;
+  text-align: center;
+}
+nav ul li {
+  display: inline-block;
+}
+nav ul li a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: #aaa;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin: 0 10px;
+}
+nav ul li a,
+nav ul li a:after,
+nav ul li a:before {
+  transition: all .5s;
+}
+nav ul li a:hover {
+  color: #555;
+}
+
+nav.stroke ul li a{
+  position: relative;
+}
+nav.stroke ul li a:after
+{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0%;
+  content: '.';
+  color: transparent;
+  background: #333;
+  height: 1px;
+}
+nav.stroke ul li a:hover:after {
+  width: 100%;
+}
+
+    </style>
+  </head>
+  <body>
+    <nav class="stroke" >
+      <ul style="margin-top: 0;">
+        <li 
+          style="
+            float: left;
+            padding-left: 150px;
+             ">
+          <a href="../" 
+             style="text-decoration: none;
+                    color:#ffdf6b;
+                    font-size: 20px;
+                    font-family: 'Pacifico', cursive;">
+            GStore</a            >
+        </li>
+        <li style="padding-right: 120px;padding-left: 0;"><a href="/cart" style="text-decoration: none;
+          color: #ffdf6b;
+          font-size: 15px;
+          font-family: 'Poppins', sans-serif;"><i class="fas fa-shopping-cart"></i></a></li>
+        <% if(localStorage.getItem("user_token")){ %>
+        <li><a href="/logout" style="text-decoration: none;
+          color: black;
+          font-size: 15px;
+          font-family: 'Poppins', sans-serif;" >Logout</a></li>
+        <%}%>
+        <li><a href="/allprod"style="text-decoration: none;
+                    color: black;
+                    font-size: 15px;
+                    font-family: 'Poppins', sans-serif;" >Explore</a></li>
+        <% if(!localStorage.getItem("user_token")){ %>
+        <li><a href="/account" style="text-decoration: none;
+          color: black;
+          font-size: 15px;
+          font-family: 'Poppins', sans-serif;">Sign Up</li></a>
+        <%}%>
+        <% if(localStorage.getItem("user_token")){%>
+          <li><a href="#"style="text-decoration: none;
+                    color: black;
+                    font-size: 16px;
+                    font-family: 'Poppins', sans-serif;">Hi!  <%= user_obj.username%></li></a>
+        <%}%>
+      </ul>
+    </nav>
+      
+    <div
+      style="
+        display: inline-block;
+        width: 65%;
+        margin-left: 340px;
+        margin-top: 50px;
+      "
+    >
+      <input  type="text" id="searchbox"style="margin-left: 10px;width:300px;margin-right:6px" name="input" placeholder="Search Your Product">
+      <button type="submit" class="btn btn-success"id="searchbtn" onclick="gotoprodpg(this)" >Search</button>
+      <select style="margin-left: 40px; border: 1px solid #ffbe0f" onchange="gotopage(this)">
+        <option value="0">Default</option>
+        <option value="1">Sort By Price</option>
+        <option value="2">Sort By Revieiws</option>
+        <option value="3">Newest to Oldest</option>
+      </select>
+      
+     </div>
+    <div
+      style="
+        width: 60%;
+        height: fit-content;
+        display: flex;
+        justify-content: space-evenly;
+        margin-left: 240px;
+        margin-top: 30px;
+        flex-wrap: wrap;
+      "
+    > 
+    <% jo_dia.forEach((item,index)=>{  %>
+      <div style="display: flex; flex-direction: column; margin: 10px;position: relative;" class="up" >
+        <a href="/prod/<%=item._id%>" style="text-decoration: none;">
+        <img  
+          src="/images/<%=item.p_img%>.jpg"
+          alt="nahi"
+          class="gray"
+          height="250px"
+          width="170px"
+          style="margin: 5px"
+          style="margin: 5px"
+        />
+        <h4 style="padding-left: 7px;font-family: 'Montserrat', sans-serif;color: black;font-size: 17px;font-weight:400;margin: 0;"><%= item.p_name %></h4></a>
+        <div style="display: inline">
+          <i
+            style="padding-left: 4px; margin: 0;color:#ffdf6b"
+            class="fas fa-star"
+          ></i>
+          <i style="margin: 0; color:#ffdf6b" class="fas fa-star"></i>
+          <i style="margin: 0; color:#ffdf6b" class="fas fa-star"></i>
+        </div>
+        <p style="padding-left: 7px; font-size: 15px;font-family: 'Montserrat', sans-serif;font-size: 16px;">Rs.<%=item.price%>.00</p>
+        <div style="display:block;margin-left: 85px;position: relative;bottom: 26px;"></div>
+      </div>
+    <% }) %>
+    </div>
+    <div style="margin: 15px; margin-left: 295px">
+      <button
+        class="btn-next"
+        style="width: 35px; height: 35px; border: 1px solid silver"
+      >
+        1
+      </button>
+      <button
+        class="btn-next"
+        style="width: 35px; height: 35px; border: 1px solid silver"
+      >
+        2
+      </button>
+      <button
+        class="btn-next"
+        style="width: 35px; height: 35px; border: 1px solid silver"
+      >
+        3
+      </button>
+      <button
+        class="btn-next"
+        style="width: 35px; height: 35px; border: 1px solid silver"
+      >
+        <i class="fas fa-arrow-right" style="padding-left: 6px"></i>
+      </button>
+    </div>
+    <div class="footer-bottom-area bg-dark-light section-padding-sm">
+      <div class="container">
+          <div class="row widgets footer-widgets">
+
+              <div class="col-lg-7 col-md-8 col-12">
+                  <div class="single-widget widget-about">
+                      <div style="display: flex;flex-direction: column;padding-top: 80px;"></div>
+                      
+                        <p class="address">
+                            <span class="icon"><i class="fa fa-map-marker" style="margin-right: 18px;"></i>100 Baria Sreet City, IN.</span>
+                            
+                        </p>
+                        <br>
+                        <p class="phone">
+                            <span class="icon"><i class="fa fa-phone" style="margin-right: 10px;"></i>
+                            <a href="#" style="text-decoration: none;color: white;" >+91 7568 54 3012</a></span>
+                        </p>
+                        <br>
+                        <p class="email">
+                            <span class="icon"><i class="fa fa-envelope-o" style="margin-right: 10px;"></i>
+                            <a href="#" style="text-decoration: none;color: white;">abc@gmail.com</a></span>
+                        </p>
+                    
+                      </div>
+              </div>
+
+              
+              <div class="col-lg-3 col-md-6 col-12">
+                  <div class="single-widget widget-contact" style="margin-bottom: 12px;">
+                    <p style="font-size: 15px;margin-bottom: 10px;margin-top: 20px;
+                    font-family: 'Poppins', sans-serif;font-weight:bold;padding-top: 55px;">About The Company</p>
+                    <p style="font-size: 12px;margin-bottom: 10px;margin-top: 20px;color: silver;
+                    font-family: 'Poppins', sans-serif;line-height:1.8;">Lorem Ipsum Lorem Ipsum It was popularised in the 1960s with the release of Letraset sheet Lorem Ipsum passag. Lorem Ipsume containing Lorem Ipsum. </p>
+                  </div>
+                  <div style="display: flex;">
+                    <button class="btn btn-lg btn-outline-secondary" style="margin: 6px;"><i class="fab fa-facebook-f"></i></button>
+                  <button class="btn  btn-lg btn-outline-secondary" style="margin: 6px;"><i class="fab fa-twitter"></i></button>
+                  <button class="btn  btn-lg btn-outline-secondary" style="margin: 6px;"><i class="fab fa-linkedin-in"></i></button>
+                  <button class="btn  btn-lg btn-outline-secondary" style="margin: 6px;"><i class="fab fa-github"></i></button>
+                  </div>
+                  <br>
+                  
+              </div>
+
+          </div>
+      </div>
+  </div>
+
+
+    <script>
+      $(function(){
+        $('#searchbox').autocomplete({
+          source:(req,res)=>{
+            $.ajax({
+              url:"/autocomplete",
+              dataType:"jsonp",
+              type:"GET",
+              data:req,
+              success:function(data){
+              console.log(res);
+                res(data);
+              },
+              error:(err)=>{
+                console.log(err);
+              }
+            })
+          },
+          minLength:1,
+          select: (event,ui)=>{
+            if(ui.item){
+              console.log(ui.item);
+              $('#searchbox').text(ui.item.label);
+              window.location.href=`/prod/${ui.item.id}`
+     
+            }
+          }
+        })
+      })
+      
+      function gotopage(item){
+        window.location.href=`/allprod/${item.value}`
+      }
+      
+    </script>
+  </body>
+</html>

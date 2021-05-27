@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Pattaya&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Montserrat:wght@300;400&family=Mountains+of+Christmas&family=Oswald:wght@300&family=Pacifico&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+    <script
+      src="https://kit.fontawesome.com/03bf074d16.js"
+      crossorigin="anonymous"
+    ></script>
+    
+    <title>GStore</title>
+    <style>
+      .bg-dark-light {
+    background: #323232 !important;
+}
+.bg-theme, .bg-dark, .bg-dark-light, .bg-secondary {
+    color: #ffffff;
+}
+.widgets.footer-widgets .widget-title {
+    color: #ffffff;
+    font-family: "Raleway", sans-serif;
+    font-weight: 700;
+    margin-bottom: 30px;
+    letter-spacing: 0.5px;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.widgets.footer-widgets .widget-title::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 100px;
+    background: #13bfb1;
+}
+.widgets.footer-widgets .widget-quick-links ul {
+    margin-top: -4px;
+}
+.widgets.footer-widgets .single-widget ul {
+    padding-left: 0;
+    margin-bottom: 0;
+}
+
+.widgets.footer-widgets .widget-quick-links ul li {
+    display: block;
+}
+.widgets.footer-widgets .widget-quick-links ul li a {
+    display: block;
+    font-size: 13px;
+    color: #ffffff;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 9px 0;
+}
+
+.widgets.footer-widgets .single-widget ul li {
+    list-style: none;
+    font-family: "Raleway", sans-serif;
+}
+.widgets.footer-widgets .widget-contact ul li {
+    color: #000;
+    font-size: 13px;
+    color: #ffffff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+.widgets.footer-widgets .widget-contact ul li span {
+    font-size: 14px;
+    color: #ffffff;
+    border: 2px solid #cccccc;
+    border-radius: 3px;
+    height: 32px;
+    width: 32px;
+    display: inline-block;
+    line-height: 28px;
+    text-align: center;
+    margin-right: 20px;
+}
+.widgets.footer-widgets .widget-contact ul li.phone, .widgets.footer-widgets .widget-contact ul li.fax {
+    font-size: 15px;
+}
+
+.widgets.footer-widgets .widget-contact ul li + li {
+    margin-top: 20px;
+}
+     .category{
+      transition: transform .2s; 
+
+     }
+     .category:hover{
+       filter: brightness(70%);
+       transform: scale(1.15); 
+
+     }
+      a{
+        text-decoration: none;
+      }
+      
+
+      .gray {
+        filter: grayscale(100%);
+        border-radius: 50%;
+        margin: 13px;
+      }
+      .gray:hover {
+        filter: none;
+      }
+      .gray1{
+        filter: grayscale(100%);
+        margin: 13px;  
+      }
+      .gray1:hover {
+        filter: none;
+      }
+      .card {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        position: relative;
+        transition: 0.3s;
+        width: 40%;
+      }
+
+      .card:hover {
+        top: -13px;
+        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+      }
+
+      .container {
+        padding: 2px 16px;
+      }
+
+      .up:hover {
+        top: -18px;
+      }
+      * {
+        font-family: 'Pacifico', cursive;
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        
+        list-style: none;
+        padding-top: 23px;
+      }
+      li {
+        color: white;
+        font-size: 17px;
+        margin: 2px 8px;
+        float: right;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      style="
+        background-image: url('/images/add_prod_bg.jpeg');
+        background-repeat: no-repeat;
+        background-size:cover;
+        filter: brightness(100%);
+        margin-top: 0;
+      ">
+      <div>
+        <ul >
+          <li
+            style="
+              float: left;
+              padding-left: 150px;
+               ">
+            <a href="../" 
+               style="text-decoration: none;
+                      color: white;
+                      font-size: 20px;
+                      font-family: 'Pacifico', cursive;">
+              GStore</a            >
+          </li>
+          <li style="padding-right: 120px;padding-left: 0;"><a href="/cart" style="text-decoration: none;
+            color: white;
+            font-size: 15px;
+            font-family: 'Poppins', sans-serif;"><i class="fas fa-shopping-cart"></i></a></li>
+          <% if(localStorage.getItem("user_token")){ %>
+          <li><a href="/logout" style="text-decoration: none;
+            color: white;
+            font-size: 20px;
+            font-family: 'Poppins', sans-serif;" >Logout</a></li>
+          <%}%>
+          <li><a href="/allprod"style="text-decoration: none;
+                      color: white;
+                      font-size: 15px;
+                      font-family: 'Poppins', sans-serif;" >Explore</a></li>
+          <% if(!localStorage.getItem("user_token")){ %>
+          <li><a href="/account" style="text-decoration: none;
+            color: white;
+            font-size: 15px;
+            font-family: 'Poppins', sans-serif;">Sign Up</li></a>
+          <%}%>
+          
+        </ul>
+      </div>
+    <div style="margin-left: 200px;width: 70%;padding: 20px;background-color: white;margin-top: 140px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);;height: 440px;margin-bottom: 50px;padding-right: 30px;">
+      <h2 style=" font-size: 25px;margin-left: 350px;margin-bottom: 15px;
+      font-family: 'Pattaya', sans-serif;">Add New Product</h2>
+      <form action="/admin/add_prod" method="POST">
+      <label style="font-size: 15px;
+      font-family: 'Poppins', sans-serif;margin-left:27px;" for="p_id">Product-Id</label>   
+      <input class="form-control" style="display:inline;margin:3px;width:270px" type="text" name="p_id" id="">
+      <label style="margin-left:15px;font-size: 15px;
+      font-family: 'Poppins', sans-serif;" for="p_name">Product-Name</label>   
+      <input class="form-control" style="display:inline;margin:3px;width:270px" type="text" name="p_name" id="">
+      <label style="margin-left:21px;font-size: 15px;
+      font-family: 'Poppins', sans-serif;" for="avl_qty">Total Count</label>   
+      <input class="form-control" style="display:inline;margin:3px;width:270px" type="number" name="avl_qty" id="">
+      <label style="margin-left:25px;font-size: 15px;
+      font-family: 'Poppins', sans-serif;" for="price">Product-Price</label>   
+        <input class="form-control" style="display:inline;margin:3px;width:270px" type="number" name="price" id="">
+        <label style="margin-left:0px;font-size: 15px;
+      font-family: 'Poppins', sans-serif;" for="brand">Product Brand</label>   
+        <input class="form-control" style="display:inline;margin:3px;width:270px" type="text" name="brand" id="">
+        <label style="margin-left:15px;font-size: 15px;
+      font-family: 'Poppins', sans-serif;" for="p_img">Product-Image</label>   
+        <input class="form-control" style="display:inline;margin:3px;width:270px" type="text" name="p_img" id="">
+        <label style="margin-left:1px;font-size: 15px;
+      font-family: 'Poppins', sans-serif;" for="size_avl">Availavle Sizes</label>   
+        <input class="form-control" style="display:inline;margin:3px;width:270px" type="text" name="size_avl" id="">
+        <label style="margin-left:7px;font-size: 15px;
+      font-family: 'Poppins', sans-serif;" for="colors">Availavle  Colors</label>   
+        <input class="form-control" style="display:inline;margin:3px;width:270px" type="text" name="colors" id="">
+        <label style="margin-left:39px;font-size: 15px;
+      font-family: 'Poppins', sans-serif;" for="category">Category</label>   
+        <input class="form-control" style="display:inline;margin:3px;width:270px" type="text" name="category" id="">
+        <label style="margin-left:25px;font-size: 15px;
+      font-family: 'Poppins', sans-serif;" for="tags">Product-Tags</label>   
+        <input class="form-control" style="display:inline;margin:3px;width:270px" type="text" name="tags" id="">
+        <label style="margin-left:25px;font-size: 15px;
+      font-family: 'Poppins', sans-serif;" for="desc">Description</label>   
+        <input class="form-control" style="display:inline;margin:3px;width:270px" type="text" name="desc" id="">
+        <label style="margin-left:60px;font-size: 15px;
+      font-family: 'Poppins', sans-serif;" for="tags">Featured</label>   
+        <select class="form-control" style="display:inline;margin:3px;width:270px;font-family: 'Poppins', sans-serif;" type="text" name="isFeatured" id="">
+        <option value="1"style="font-family: 'Poppins', sans-serif;" > Yes</option>
+        <option value="0" style="font-family: 'Poppins', sans-serif;">No</option>
+        </select>
+        <label style="margin-left:43px;font-size: 15px;
+      font-family: 'Poppins', sans-serif;" for="desc">Exclusive</label>   
+        <select class="form-control" style="display:inline;margin:3px;width:270px;font-family: 'Poppins', sans-serif;" type="text" name="isExclusive" id="">
+          <option value="1"style="font-family: 'Poppins', sans-serif;" > Yes</option>
+          <option value="0" style="font-family: 'Poppins', sans-serif;">No</option>
+          </select>
+          <label style="margin-left:82px;font-size: 15px;
+      font-family: 'Poppins', sans-serif;" for="tags">Latest</label>   
+        <select class="form-control" style="display:inline;margin:3px;width:270px;font-family: 'Poppins', sans-serif;" type="text" name="isLatest" id="">
+        <option value="1"style="font-family: 'Poppins', sans-serif;" > Yes</option>
+        <option value="0" style="font-family: 'Poppins', sans-serif;">No</option>
+        </select>
+        
+
+        <button class="btn btn-success" type="submit" style="margin-left: 390px;margin-top: 15px;">Submit</button>
+    </form>
+  </div >
+  <div class="footer-bottom-area bg-dark-light section-padding-sm">
+    <div class="container">
+        <div class="row widgets footer-widgets">
+
+            <div class="col-lg-7 col-md-8 col-12">
+                <div class="single-widget widget-about">
+                    <div style="display: flex;flex-direction: column;padding-top: 80px;"></div>
+                    
+                      <p class="address">
+                          <span class="icon"><i class="fa fa-map-marker" style="margin-right: 18px;"></i>100 Baria Sreet City, IN.</span>
+                          
+                      </p>
+                      <br>
+                      <p class="phone">
+                          <span class="icon"><i class="fa fa-phone" style="margin-right: 10px;"></i>
+                          <a href="#" style="text-decoration: none;color: white;" >+91 7568 54 3012</a></span>
+                      </p>
+                      <br>
+                      <p class="email">
+                          <span class="icon"><i class="fa fa-envelope-o" style="margin-right: 10px;"></i>
+                          <a href="#" style="text-decoration: none;color: white;">abc@gmail.com</a></span>
+                      </p>
+                  
+                    </div>
+            </div>
+
+            
+            <div class="col-lg-3 col-md-6 col-12">
+                <div class="single-widget widget-contact" style="margin-bottom: 12px;">
+                  <p style="font-size: 15px;margin-bottom: 10px;margin-top: 20px;
+                  font-family: 'Poppins', sans-serif;font-weight:bold;padding-top: 55px;">About The Company</p>
+                  <p style="font-size: 12px;margin-bottom: 10px;margin-top: 20px;color: silver;
+                  font-family: 'Poppins', sans-serif;line-height:1.8;">Lorem Ipsum Lorem Ipsum It was popularised in the 1960s with the release of Letraset sheet Lorem Ipsum passag. Lorem Ipsume containing Lorem Ipsum. </p>
+                </div>
+                <div style="display: flex;">
+                  <button class="btn btn-lg btn-outline-secondary" style="margin: 6px;"><i class="fab fa-facebook-f"></i></button>
+                <button class="btn  btn-lg btn-outline-secondary" style="margin: 6px;"><i class="fab fa-twitter"></i></button>
+                <button class="btn  btn-lg btn-outline-secondary" style="margin: 6px;"><i class="fab fa-linkedin-in"></i></button>
+                <button class="btn  btn-lg btn-outline-secondary" style="margin: 6px;"><i class="fab fa-github"></i></button>
+                </div>
+                <br>
+                
+            </div>
+
+        </div>
+    </div>
+</div>
+    </body>
+  </html>
+  

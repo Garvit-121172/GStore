@@ -1,0 +1,540 @@
+  <!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+      <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Montserrat:wght@300;400&family=Mountains+of+Christmas&family=Oswald:wght@300&family=Pacifico&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+      
+      <script
+      src="https://kit.fontawesome.com/03bf074d16.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,100;1,300&display=swap"
+      rel="stylesheet"
+    />
+
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <script
+        src="https://kit.fontawesome.com/03bf074d16.js"
+        crossorigin="anonymous"
+      ></script>
+      <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+      <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+      <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script> <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,100;1,300&display=swap"
+        rel="stylesheet"
+      />
+      <title>GStore</title>
+      <style>
+          .bg-dark-light {
+      background: #323232 !important;
+  }
+  .bg-theme, .bg-dark, .bg-dark-light, .bg-secondary {
+      color: #ffffff;
+  }
+  .widgets.footer-widgets .widget-title {
+      color: #ffffff;
+      font-family: "Raleway", sans-serif;
+      font-weight: 700;
+      margin-bottom: 30px;
+      letter-spacing: 0.5px;
+      position: relative;
+      padding-bottom: 15px;
+  }
+
+  .widgets.footer-widgets .widget-title::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      height: 2px;
+      width: 100px;
+      background: #13bfb1;
+  }
+  .widgets.footer-widgets .widget-quick-links ul {
+      margin-top: -4px;
+  }
+  .widgets.footer-widgets .single-widget ul {
+      padding-left: 0;
+      margin-bottom: 0;
+  }
+
+  .widgets.footer-widgets .widget-quick-links ul li {
+      display: block;
+  }
+  .widgets.footer-widgets .widget-quick-links ul li a {
+      display: block;
+      font-size: 13px;
+      color: #ffffff;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 9px 0;
+  }
+
+  .widgets.footer-widgets .single-widget ul li {
+      list-style: none;
+      font-family: "Raleway", sans-serif;
+  }
+  .widgets.footer-widgets .widget-contact ul li {
+      color: #000;
+      font-size: 13px;
+      color: #ffffff;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+  }
+  .widgets.footer-widgets .widget-contact ul li span {
+      font-size: 14px;
+      color: #ffffff;
+      border: 2px solid #cccccc;
+      border-radius: 3px;
+      height: 32px;
+      width: 32px;
+      display: inline-block;
+      line-height: 28px;
+      text-align: center;
+      margin-right: 20px;
+  }
+  .widgets.footer-widgets .widget-contact ul li.phone, .widgets.footer-widgets .widget-contact ul li.fax {
+      font-size: 15px;
+  }
+
+  .widgets.footer-widgets .widget-contact ul li + li {
+      margin-top: 20px;
+  }
+        .btn-next {
+          background-color: white;
+          color: black;
+        }
+        .btn-next:hover {
+          color: white;
+          background-color: #ffdf6b;
+        }
+        * {
+          font-family: "Poppins", sans-serif;
+          margin: 0;
+          padding: 0;
+        }
+        footer {
+          background-color: black;
+          color: white;
+          height: 250px;
+          position: relative;
+          top: 40px;
+          width: 100%;
+          margin: 0;
+        }
+        .coloumn {
+          float: left;
+          height: 100px;
+          padding: 10px;
+          padding-top: 40px;
+        }
+        .first {
+          text-align: left;
+          padding-left: 20px;
+          padding-right: 10px;
+          width: 26%;
+        }
+        .sec {
+          padding: 10px;
+          padding-top: 40px;
+          width: 29%;
+          text-align: center;
+        }
+        .third {
+          width: 18%;
+        }
+        .forth {
+          width: 18%;
+        }
+        ul {
+          list-style: none;
+          padding-top: 30px;
+        }
+        li {
+          color: black;
+          font-size: 17px;
+          margin: 2px 8px;
+          float: right;
+          padding-bottom: 25px;
+        }
+        a {
+          text-decoration: none;
+          color: black;
+        }
+        .up:hover {
+          top: -16px;
+        }
+        
+
+  nav {
+    font-family: 'Montserrat', sans-serif;
+    width: 80%;
+    margin: 0 auto;
+    background: #fff;
+    padding: 1px 0;
+    box-shadow: 0px 0px 0px #dedede;
+    margin-top: 0;
+  }
+
+  /* By Dominik Biedebach @domobch */
+  nav ul {
+    list-style: none;
+    text-align: center;
+  }
+  nav ul li {
+    display: inline-block;
+  }
+  nav ul li a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #aaa;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin: 0 10px;
+  }
+  nav ul li a,
+  nav ul li a:after,
+  nav ul li a:before {
+    transition: all .5s;
+  }
+  nav ul li a:hover {
+    color: #555;
+  }
+
+  nav.stroke ul li a{
+    position: relative;
+  }
+  nav.stroke ul li a:after
+  {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 0%;
+    content: '.';
+    color: transparent;
+    background: #333;
+    height: 1px;
+  }
+  nav.stroke ul li a:hover:after {
+    width: 100%;
+  }
+
+      </style>
+    </head>
+    <body>
+      <nav class="stroke" >
+        <ul style="margin-top: 0;">
+          <li 
+            style="
+              float: left;
+              padding-left: 150px;
+              ">
+            <a href="../" 
+              style="text-decoration: none;
+                      color:#ffdf6b;
+                      font-size: 20px;
+                      font-family: 'Pacifico', cursive;">
+              GStore</a            >
+          </li>
+          <li style="padding-right: 120px;padding-left: 0;"><a href="/cart" style="text-decoration: none;
+            color: #ffdf6b;
+            font-size: 15px;
+            font-family: 'Poppins', sans-serif;"><i class="fas fa-shopping-cart"></i></a></li>
+          <% if(localStorage.getItem("user_token")){ %>
+          <li><a href="/logout" style="text-decoration: none;
+            color: black;
+            font-size: 15px;
+            font-family: 'Poppins', sans-serif;" >Logout</a></li>
+          <%}%>
+          <li><a href="/allprod"style="text-decoration: none;
+                      color: black;
+                      font-size: 15px;
+                      font-family: 'Poppins', sans-serif;" >Explore</a></li>
+          <% if(!localStorage.getItem("user_token")){ %>
+          <li><a href="/account" style="text-decoration: none;
+            color: black;
+            font-size: 15px;
+            font-family: 'Poppins', sans-serif;">Sign Up</li></a>
+          <%}%>
+        </ul>
+      </nav>
+    <br />
+    <br /><br />
+    <div style="margin-left: 250px;margin-right: 250px;height: 400px;padding-top: 15px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);">
+    <div
+      style="
+        margin-left: 50px;
+        width: 90%;
+        height: 300px;
+        margin-bottom: 0;
+      "
+    >
+      <div style="width:100%;">
+        <img
+          id="<%=product.p_id%>"
+          src="/images/<%=product.p_img%>.jpg"
+          class="jo_aygi"
+          alt="nai ayi"
+          height="290px"
+          width="310px"
+          style="
+            float: left;
+            padding: 20px;
+            padding-top: 2px;
+            padding-bottom: 0;
+            margin-bottom: 0;
+          "
+        />
+
+        <p style="padding: 6px; margin-bottom: 0;font-family: 'Montserrat', sans-serif;font-size: 16px;">Category/<%=product.tags[0]%></p>
+        <h3 style="padding-left: 6px; margin-top: 0;font-family: 'Poppins', sans-serif;color: black;font-size: 19px;font-weight:400;"><%= product.p_name%></h3>
+        <h5 style="margin-bottom: 20px;font-family: 'Montserrat', sans-serif;font-size: 16px;">Rs.<%=product.price%></h5>
+        <form action="/add_to_cart/<%=product._id%>" method="POST">
+        <input
+        class="form-control"
+          name="qty" 
+          type="number"
+          step="1"
+          style="width: 65px; display: block; margin: 10px; margin-bottom: 15px"
+          min="1"
+          id="p_qty"
+          placeholder="1"
+          value="1"
+          />
+        <select
+          class="form-select form-control"
+          name="size"
+          id="size"
+          style="margin: 0;width: 100px; margin-right: 10px; margin-bottom: 20px"
+        >
+          <option value="S">S</option>
+          <option value="M">M</option>
+          <option value="L">L</option>
+          <option value="XL">XL</option>
+          <option value="XXL">XXL</option>
+          <option value="free">Free Size</option>
+        </select>
+
+        <button
+          class="btn btn-lg btn-success"
+          style="
+            border-radius: 10px;
+            border: 1px solid white;
+            color: white;
+          "
+          type="submit"
+        >
+          <span style="font-size: 16px">Add to Cart</span>
+          <i class="fas fa-arrow-right" style="padding-left: 6px"></i>
+        </button>
+      </form>
+        <h3 style="margin-top:20px;margin-bottom: 0;font-family: 'Poppins', sans-serif;color: black;font-size: 16px;">Product Description <i class="fas fa-file-alt" style="color: #5bc0de;margin-left: 5px;"></i></h3>
+      </div>
+    </div>
+    <div style="margin-left: 55px;margin-top: 0px; width: 60%">
+      <div style=" margin: 0">
+        <img 
+          id="pic1"
+          onclick="set(this.id)"
+          src="/images/gallery-1.jpg"
+          alt="nai ayi"
+          height="70px"
+          width="70px"
+          style="float: left; padding: 5px; margin: 0; padding-top: 0;padding-left: 20px;"
+        />
+        <img 
+          id="pic2"
+          onclick="set(this.id)"
+          src="/images/gallery-2.jpg"
+          alt="nai ayi"
+          height="70px"
+          width="70px"
+          style="float: left; padding: 5px; padding-top: 0"
+        /><img 
+          id="pic3"
+          onclick="set(this.id)"
+          src="/images/gallery-3.jpg"
+          alt="nai ayi"
+          height="70px"
+          width="70px"
+          style="float: left; padding: 5px; padding-top: 0"
+        /><img 
+          id="pic4"
+          onclick="set(this.id)"
+          src="/images/gallery-4.jpg"
+          alt="nai ayi"
+          height="70px"
+          width="70px"
+          style="float: left; padding: 5px; padding-top: 0"
+        />
+        <div style=" margin-left: 285px; width: 400px;">
+          <p style="margin-top: 0; padding-top: 6px;padding-left: 20px;">
+           This has tags: <%=product.tags%>   
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+    <br><br>
+    <div
+      style="
+        margin-left: 250px;
+        width: 60%;
+        margin-top: 30px;
+      "
+    >
+      <h2 style="display: inline;font-family: 'Poppins', sans-serif;color: black;font-size: 20px;;">Related Products</h2>
+      <p style="display: inline; margin-left: 450px"><a href="/allprod" style="text-decoration: none;font-family: 'Poppins', sans-serif;color: black;font-size: 14px;">View More</p></a>
+    </div>
+    <div style="height: 450px; text-align: center;margin-top: 60px;">
+        <div style="display: flex; justify-content: center">
+          <% rel_array.slice().reverse().forEach((r_item)=>{%>
+
+            <div
+            style="width: 200px; position: relative; padding-right: 25px;margin: 8px;"
+            class="up"
+            >
+            <a href="/prod/<%=r_item._id%>" style="text-decoration: none;" > 
+            <img
+            src="/images/<%=r_item.p_img%>.jpg"
+            alt="aya nhai"
+            width="200px"
+            height="250px"
+            />
+            <h4 style="margin: 0; text-align: left;
+            font-family: 'Montserrat', sans-serif;font-size: 17px;color: black;"><%=r_item.p_name%></h4></a>
+            <p style="margin: 0; text-align: left"><div style="display: inline">
+              <i class="fas fa-star" style="color: #ffdf6b;margin-left: -120px;margin-top: 2px;"></i><i class="fas fa-star" style="color: #ffdf6b"></i
+              ><i class="fas fa-star" style="color: #ffdf6b"></i>
+            </div></p>
+            <p style="margin: 0;margin-top: -12px;font-size: 16px;
+            font-family: 'Montserrat', sans-serif; text-align: left">Rs.<%=r_item.price%></p>
+          </div>
+          <%})%>
+        </div>
+      </div>
+   <section style="margin-left:250px;">
+     <h2 style="font-size: 25px;
+     font-family: 'Poppins', sans-serif;">Reviews</h2>
+     <div style="background-color: #fbfbff;margin-right: 250px;">
+      <% if(product.reviews.length==0){%>
+      <h5 style="font-size: 15px;
+     
+      font-family: 'Poppins', sans-serif;margin:10px;">Be The First One to Write..</h5>
+      <% } %>
+     <% product.reviews.forEach((rvw)=>{ %>
+      <h4 style="font-size: 15px;
+      font-family: 'Poppins', sans-serif;margin-top: 1px;padding-left: 10px;padding-top: 10px;">
+        <%=rvw.rev_head%>
+      </h4> <span style="margin-left: 10px;">  
+      <% for(var i=0;i< rvw.rev_stars;i++){ %>
+        <i style="margin: 0;margin-top: 2px; color: #ffdf6b;" class="fas fa-star"></i>
+        <%}%>  </span>
+        <p style="margin: 0;margin-top: 2px;margin-bottom: 6px;font-size: 15px;
+        font-family: 'Poppins', sans-serif;margin-top: 1px;margin-left: 10px;"><%=rvw.rev_body%></p>  
+        <hr style="width: 40%;margin-left: 2px;">
+        <%})%>
+      </div>
+     <h3 style="font-size: 20px;
+     font-family: 'Poppins', sans-serif;">Write A Review</h3>
+     <div style="background-color: #13bfb1;margin-left: 0px;padding:20px;margin-right: 250px;margin-bottom: 10px;">
+     <form action="/prod/review/<%=product._id%>" method="POST">
+      <div style="display: flex;flex-direction:column;">
+      <label  for="rev_stars"style="font-size: 15px;
+      font-family: 'Poppins', sans-serif;" > Rating:</label>
+      <select  class="form-control" style="width: 60px;" name="rev_stars">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+      </select>
+      </div>
+      <div style="display: flex;flex-direction:column;margin-top: 5px;">
+      <label for="r_head"  style="font-size: 15px;
+      font-family: 'Poppins', sans-serif;">Review Heading:</label>
+      <input  class="form-control"style="width:40%;" name="rev_head">
+      </div>
+      <div style="display:flex;flex-direction:column;margin-top: 5px;">
+      <label  for="r_body" style="font-size: 15px;
+      font-family: 'Poppins', sans-serif;">Reveiew:</label>
+      <textarea class="form-control" style="width: 60%;" type="text" row="50" cols="50" name="rev_body"></textarea>     
+      <button  class="btn btn-success" style="width: 100px;margin-top: 10px;padding: 3px;margin-bottom: 10px;" type="submit">Submit</button>
+      </div>
+    </form>
+    </div>
+    </section>
+    <div class="footer-bottom-area bg-dark-light section-padding-sm">
+      <div class="container">
+          <div class="row widgets footer-widgets">
+
+              <div class="col-lg-7 col-md-8 col-12">
+                  <div class="single-widget widget-about">
+                      <div style="display: flex;flex-direction: column;padding-top: 80px;"></div>
+                      
+                        <p class="address">
+                            <span class="icon"><i class="fa fa-map-marker" style="margin-right: 18px;"></i>100 Baria Sreet City, IN.</span>
+                            
+                        </p>
+                        <br>
+                        <p class="phone">
+                            <span class="icon"><i class="fa fa-phone" style="margin-right: 10px;"></i>
+                            <a href="#" style="text-decoration: none;color: white;" >+91 7568 54 3012</a></span>
+                        </p>
+                        <br>
+                        <p class="email">
+                            <span class="icon"><i class="fa fa-envelope-o" style="margin-right: 10px;"></i>
+                            <a href="#" style="text-decoration: none;color: white;">abc@gmail.com</a></span>
+                        </p>
+                    
+                      </div>
+              </div>
+
+              
+              <div class="col-lg-3 col-md-6 col-12">
+                  <div class="single-widget widget-contact" style="margin-bottom: 12px;">
+                    <p style="font-size: 15px;margin-bottom: 10px;margin-top: 20px;
+                    font-family: 'Poppins', sans-serif;font-weight:bold;padding-top: 55px;">About The Company</p>
+                    <p style="font-size: 12px;margin-bottom: 10px;margin-top: 20px;color: silver;
+                    font-family: 'Poppins', sans-serif;line-height:1.8;">Lorem Ipsum Lorem Ipsum It was popularised in the 1960s with the release of Letraset sheet Lorem Ipsum passag. Lorem Ipsume containing Lorem Ipsum. </p>
+                  </div>
+                  <div style="display: flex;">
+                    <button class="btn btn-lg btn-outline-secondary" style="margin: 6px;"><i class="fab fa-facebook-f"></i></button>
+                  <button class="btn  btn-lg btn-outline-secondary" style="margin: 6px;"><i class="fab fa-twitter"></i></button>
+                  <button class="btn  btn-lg btn-outline-secondary" style="margin: 6px;"><i class="fab fa-linkedin-in"></i></button>
+                  <button class="btn  btn-lg btn-outline-secondary" style="margin: 6px;"><i class="fab fa-github"></i></button>
+                  </div>
+                  <br>
+                  
+              </div>
+
+          </div>
+      </div>
+  </div>
+
+
+    <script>
+      console.log("ayahasd");
+      var s=document.getElementById("jha_aygi");
+      var t=document.getElementsByClassName("jo_aygi")[0];
+      console.log(s,t);
+      function set(click_id){
+        console.log(click_id);
+        s.src=document.getElementById(click_id).src;  
+        }
+    </script>
+    </body>
+</html>

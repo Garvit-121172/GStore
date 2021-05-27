@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://js.braintreegateway.com/web/dropin/1.28.0/js/dropin.min.js"></script>
+    <script src="http://code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous" ></script>
+    <script src="pay.js" defer></script>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+      <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Montserrat:wght@300;400&family=Mountains+of+Christmas&family=Oswald:wght@300&family=Pacifico&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+      
+      <script
+      src="https://kit.fontawesome.com/03bf074d16.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,100;1,300&display=swap"
+      rel="stylesheet"
+    />
+
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <script
+        src="https://kit.fontawesome.com/03bf074d16.js"
+        crossorigin="anonymous"
+      ></script>
+      <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+      <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+      <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script> <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,100;1,300&display=swap"
+        rel="stylesheet"
+      />
+      <title>GStore</title>
+      
+    <style>
+           .bg-dark-light {
+      background: #323232 !important;
+  }
+  .bg-theme, .bg-dark, .bg-dark-light, .bg-secondary {
+      color: #ffffff;
+  }
+  .widgets.footer-widgets .widget-title {
+      color: #ffffff;
+      font-family: "Raleway", sans-serif;
+      font-weight: 700;
+      margin-bottom: 30px;
+      letter-spacing: 0.5px;
+      position: relative;
+      padding-bottom: 15px;
+  }
+
+  .widgets.footer-widgets .widget-title::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      height: 2px;
+      width: 100px;
+      background: #13bfb1;
+  }
+  .widgets.footer-widgets .widget-quick-links ul {
+      margin-top: -4px;
+  }
+  .widgets.footer-widgets .single-widget ul {
+      padding-left: 0;
+      margin-bottom: 0;
+  }
+
+  .widgets.footer-widgets .widget-quick-links ul li {
+      display: block;
+  }
+  .widgets.footer-widgets .widget-quick-links ul li a {
+      display: block;
+      font-size: 13px;
+      color: #ffffff;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 9px 0;
+  }
+
+  .widgets.footer-widgets .single-widget ul li {
+      list-style: none;
+      font-family: "Raleway", sans-serif;
+  }
+  .widgets.footer-widgets .widget-contact ul li {
+      color: #000;
+      font-size: 13px;
+      color: #ffffff;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+  }
+  .widgets.footer-widgets .widget-contact ul li span {
+      font-size: 14px;
+      color: #ffffff;
+      border: 2px solid #cccccc;
+      border-radius: 3px;
+      height: 32px;
+      width: 32px;
+      display: inline-block;
+      line-height: 28px;
+      text-align: center;
+      margin-right: 20px;
+  }
+  .widgets.footer-widgets .widget-contact ul li.phone, .widgets.footer-widgets .widget-contact ul li.fax {
+      font-size: 15px;
+  }
+
+  .widgets.footer-widgets .widget-contact ul li + li {
+      margin-top: 20px;
+  }
+        .btn-next {
+          background-color: white;
+          color: black;
+        }
+        .btn-next:hover {
+          color: white;
+          background-color: #ffdf6b;
+        }
+        * {
+          font-family: "Poppins", sans-serif;
+          margin: 0;
+          padding: 0;
+        }
+        footer {
+          background-color: black;
+          color: white;
+          height: 250px;
+          position: relative;
+          top: 40px;
+          width: 100%;
+          margin: 0;
+        }
+        .coloumn {
+          float: left;
+          height: 100px;
+          padding: 10px;
+          padding-top: 40px;
+        }
+        .first {
+          text-align: left;
+          padding-left: 20px;
+          padding-right: 10px;
+          width: 26%;
+        }
+        .sec {
+          padding: 10px;
+          padding-top: 40px;
+          width: 29%;
+          text-align: center;
+        }
+        .third {
+          width: 18%;
+        }
+        .forth {
+          width: 18%;
+        }
+        ul {
+          list-style: none;
+          padding-top: 30px;
+        }
+        li {
+          color: black;
+          font-size: 17px;
+          margin: 2px 8px;
+          float: right;
+          padding-bottom: 25px;
+        }
+        a {
+          text-decoration: none;
+          color: black;
+        }
+        .up:hover {
+          top: -16px;
+        }
+        
+
+  nav {
+    font-family: 'Montserrat', sans-serif;
+    width: 80%;
+    margin: 0 auto;
+    background: #fff;
+    padding: 1px 0;
+    box-shadow: 0px 0px 0px #dedede;
+    margin-top: 0;
+  }
+
+  /* By Dominik Biedebach @domobch */
+  nav ul {
+    list-style: none;
+    text-align: center;
+  }
+  nav ul li {
+    display: inline-block;
+  }
+  nav ul li a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #aaa;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin: 0 10px;
+  }
+  nav ul li a,
+  nav ul li a:after,
+  nav ul li a:before {
+    transition: all .5s;
+  }
+  nav ul li a:hover {
+    color: #555;
+  }
+
+  nav.stroke ul li a{
+    position: relative;
+  }
+  nav.stroke ul li a:after
+  {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 0%;
+    content: '.';
+    color: transparent;
+    background: #333;
+    height: 1px;
+  }
+  nav.stroke ul li a:hover:after {
+    width: 100%;
+  }
+      .hosted-field {
+        height: 50px;
+        box-sizing: border-box;
+        width: 100%;
+        padding: 12px;
+        display: inline-block;
+        box-shadow: none;
+        font-weight: 600;
+        font-size: 14px;
+        border-radius: 6px;
+        border: 1px solid #dddddd;
+        line-height: 20px;
+        background: #fcfcfc;
+        margin-bottom: 12px;
+        background: linear-gradient(to right, white 50%, #fcfcfc 50%);
+        background-size: 200% 100%;
+        background-position: right bottom;
+      }
+
+      .hosted-fields--label {
+        font-family: courier, monospace;
+        text-transform: uppercase;
+        font-size: 14px;
+        display: block;
+        margin-bottom: 6px;
+      }
+
+      .button-container {
+        display: block;
+        text-align: center;
+      }
+
+      .button {
+        cursor: pointer;
+        font-weight: 500;
+        line-height: inherit;
+        position: relative;
+        text-decoration: none;
+        text-align: center;
+        border-style: solid;
+        border-width: 1px;
+        border-radius: 3px;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        display: inline-block;
+      }
+
+      .button--small {
+        padding: 10px 20px;
+        font-size: 0.875rem;
+      }
+
+      .button--green {
+        outline: none;
+        background-color: #64d18a;
+        border-color: #64d18a;
+        color: white;
+        transition: all 200ms ease;
+      }
+
+      .button--green:hover {
+        background-color: #8bdda8;
+        color: white;
+      }
+
+      .braintree-hosted-fields-focused {
+        border: 1px solid #64d18a;
+        border-radius: 1px;
+        background-position: left bottom;
+      }
+
+      .braintree-hosted-fields-invalid {
+        border: 1px solid #ed574a;
+      }
+      #cardForm {
+        max-width: 50.75em;
+        margin: 0 auto;
+        padding: 1.875em;
+      }
+    </style>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+   </head>
+  <body>
+    <div id="dropin-container"></div>
+    <button  style="margin-left: 500px;background-color: #5cb85c;color: white;border: 0;padding: 6px;" id="submit-button">Confirm payment</button>
+    <a href="/cart"><button  style="margin-left: 10px;background-color: #f0ad4e;color: white;border: 0;padding: 6px;">Back To Site </button></a>
+    <script>
+      var button = document.querySelector('#submit-button');
+      braintree.dropin.create({
+        authorization: 'sandbox_tv89dy3k_vqf2bjx468v4cjwz',
+        container: '#dropin-container'
+      }, function (createErr, instance) {
+        button.addEventListener('click',async ()=>{
+          instance.requestPaymentMethod(function (requestPaymentMethodErr, payload) {
+            fetch('http:/confirmBraintree', {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json',},
+            body: JSON.stringify(payload),
+            })
+            .then(response => {
+              console.log(response);
+             return response.json()})
+            .then(data => {
+
+            console.log('Success:', data.transaction.id);
+            })
+            .catch((error) => {
+            console.error('Error:', error); 
+            });
+          });
+        });
+      });
+     
+    </script>  
+  
+  </body>
+</html>

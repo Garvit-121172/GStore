@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register</title>
+  </head>
+  <body>
+    <form action="/reg" method="POST">
+      <label for="f_name">First Nama</label>
+      <input type="text" name="f_name" id="fname" />
+      <label for="l_name">LAst Name</label>
+      <input type="text" name="l_name" id="lname" />
+      <label for="username">Username</label>
+      <input type="text" name="username" id="uname" />
+      <label for="email">Email</label>
+      <input type="email" name="mail" id="email" />
+      <label for="pass">PAssword</label>
+      <input type="password" name="pass" />
+      <label for="phone">Phone No</label>
+      <input type="phone" name="phone" id="mob" />
+      <button type="submit">Reg</button>
+    </form>
+
+    <button id="<%=p[1] %>" onclick="f(this)">B</button>
+    <button id="<%=p[2] %>" onclick="f(this)">C</button>
+    <button id="<%=p[3] %>" onclick="f(this)">D</button>
+    <script>
+      function f(x) {
+        console.log(x.id);
+      }
+    </script>
+  </body>
+</html>
